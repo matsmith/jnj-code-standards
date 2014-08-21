@@ -1,4 +1,4 @@
-#  Roundarch Isobar Front-end Development Standards and Guidelines
+#  Johnson and Johnson Front-end Development Standards and Guidelines
 
 ## License:
 
@@ -8,10 +8,11 @@ All content licensed under Creative Commons Attribution 3.0 Unported License
 
 > **Updated 20 August, 2014**
 > 
-> Updated a lot of the content to be specific to the Johnson and Johnson technologies, practices and process.  A huge thanks to Isobar for providing a great starting point of documentation under creative commons.
-> I also want to give a huge thanks to the UI Engineers at Domino's for all of their great contributions.
+> Updated a lot of the content to be specific to the Johnson and Johnson technologies, practices and process.  A huge thanks to Roundarch Isobar for providing a great starting point of documentation under creative commons.
+>
+> I also want to give a huge thanks to the UI Engineering Team at Domino's for all of their great contributions.
 
-This document contains guidelines for web applications built by the Front-end development practice of Roundarch Isobar (previously Isobar & Molecular). It is to be readily available to anyone who wishes to check or contribute to the iterative progress of our discipline's best practices.
+This document contains guidelines for web applications built by the Front-end development practice of Johnson and Johnson. It is to be readily available to anyone who wishes to check or contribute to the iterative progress of our discipline's best practices.
 
 This document's primary motivation is two- fold: 
 
@@ -33,7 +34,7 @@ This also enables pull requests to focus on content and forks to the content to 
 To view the latest, you can just clone locally:
 
 ```bash
-git clone git://github.com/isobar-idev/code-standards.git
+git clone git://github.com/matsmith/jnj-code-standards.git
 ```
 
 To make changes using the process in place, please use the build process. The next few sections describe this build process.
