@@ -6,11 +6,10 @@ All content licensed under Creative Commons Attribution 3.0 Unported License
 
 ## Summary:
 
-> **Updated 24 June, 2014**
+> **Updated 20 August, 2014**
 > 
-> A new branch has been created where we will swap the new markdown content and the new HTML/CSS layout for the next version. We will also clean up and remove the older unused files there as it will be virtually rewritten.  
-> 
-> Keep a watch on the `master.next` branch.
+> Updated a lot of the content to be specific to the Johnson and Johnson technologies, practices and process.  A huge thanks to Isobar for providing a great starting point of documentation under creative commons.
+> I also want to give a huge thanks to the UI Engineers at Domino's for all of their great contributions.
 
 This document contains guidelines for web applications built by the Front-end development practice of Roundarch Isobar (previously Isobar & Molecular). It is to be readily available to anyone who wishes to check or contribute to the iterative progress of our discipline's best practices.
 
