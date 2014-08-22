@@ -615,8 +615,13 @@ code {
   margin-bottom: 0.6875em;
 }
 
+/* line 26, ../../scss/global/_layout.scss */
+dt {
+  font-weight: 500;
+}
+
 @media only screen and (min-width: 600px) {
-  /* line 28, ../../scss/global/_layout.scss */
+  /* line 32, ../../scss/global/_layout.scss */
   .l_col,
   .pico, .nano, .micro, .milli, .centi, .deci, .deka, .hecto, .kilo, .mega, .giga {
     display: inline-block;
@@ -626,140 +631,140 @@ code {
     margin-bottom: 0;
   }
 
-  /* line 35, ../../scss/global/_layout.scss */
+  /* line 39, ../../scss/global/_layout.scss */
   .l_col {
     vertical-align: top;
   }
 
-  /* line 39, ../../scss/global/_layout.scss */
+  /* line 43, ../../scss/global/_layout.scss */
   .l_col:first-child,
   .pico:first-child, .nano:first-child, .micro:first-child, .milli:first-child, .centi:first-child, .deci:first-child, .deka:first-child, .hecto:first-child, .kilo:first-child, .mega:first-child, .giga:first-child {
     margin-left: 0;
   }
 
-  /* line 43, ../../scss/global/_layout.scss */
+  /* line 47, ../../scss/global/_layout.scss */
   .l_col:last-child,
   .pico:last-child, .nano:last-child, .micro:last-child, .milli:last-child, .centi:last-child, .deci:last-child, .deka:last-child, .hecto:last-child, .kilo:last-child, .mega:last-child, .giga:last-child {
     margin-right: 0;
   }
 
-  /* line 46, ../../scss/global/_layout.scss */
+  /* line 50, ../../scss/global/_layout.scss */
   .l_col_1, .pico {
     width: 7.1875%;
   }
 
-  /* line 49, ../../scss/global/_layout.scss */
+  /* line 53, ../../scss/global/_layout.scss */
   .l_col_2, .nano {
     width: 15.625%;
   }
 
-  /* line 52, ../../scss/global/_layout.scss */
+  /* line 56, ../../scss/global/_layout.scss */
   .l_col_3, .micro {
     width: 24.0625%;
   }
 
-  /* line 55, ../../scss/global/_layout.scss */
+  /* line 59, ../../scss/global/_layout.scss */
   .l_col_4, .milli {
     width: 32.5%;
   }
 
-  /* line 58, ../../scss/global/_layout.scss */
+  /* line 62, ../../scss/global/_layout.scss */
   .l_col_5, .centi {
     width: 40.9375%;
   }
 
-  /* line 61, ../../scss/global/_layout.scss */
+  /* line 65, ../../scss/global/_layout.scss */
   .l_col_6, .deci {
     width: 49.375%;
   }
 
-  /* line 64, ../../scss/global/_layout.scss */
+  /* line 68, ../../scss/global/_layout.scss */
   .l_col_7, .deka {
     width: 57.8125%;
   }
 
-  /* line 67, ../../scss/global/_layout.scss */
+  /* line 71, ../../scss/global/_layout.scss */
   .l_col_8, .hecto {
     width: 66.25%;
   }
 
-  /* line 70, ../../scss/global/_layout.scss */
+  /* line 74, ../../scss/global/_layout.scss */
   .l_col_9, .kilo {
     width: 74.6875%;
   }
 
-  /* line 73, ../../scss/global/_layout.scss */
+  /* line 77, ../../scss/global/_layout.scss */
   .l_col_10, .mega {
     width: 83.125%;
   }
 
-  /* line 76, ../../scss/global/_layout.scss */
+  /* line 80, ../../scss/global/_layout.scss */
   .l_col_11, .giga {
     width: 91.5625%;
   }
 
-  /* line 79, ../../scss/global/_layout.scss */
+  /* line 83, ../../scss/global/_layout.scss */
   .l_col_12, .tera {
     width: 100%;
     margin-right: 0;
   }
 
-  /* line 84, ../../scss/global/_layout.scss */
+  /* line 88, ../../scss/global/_layout.scss */
   .l_offset.l_offset_col_1, .l_offset.l_offset_pico {
     margin-left: 8.4375%;
   }
 
-  /* line 87, ../../scss/global/_layout.scss */
+  /* line 91, ../../scss/global/_layout.scss */
   .l_offset.l_offset_col_2, .l_offset.l_offset_nano {
     margin-left: 16.875%;
   }
 
-  /* line 90, ../../scss/global/_layout.scss */
+  /* line 94, ../../scss/global/_layout.scss */
   .l_offset.l_offset_col_3, .l_offset.l_offset_micro {
     margin-left: 25.3125%;
   }
 
-  /* line 93, ../../scss/global/_layout.scss */
+  /* line 97, ../../scss/global/_layout.scss */
   .l_offset.l_offset_col_4, .l_offset.l_offset_milli {
     margin-left: 33.75%;
   }
 
-  /* line 96, ../../scss/global/_layout.scss */
+  /* line 100, ../../scss/global/_layout.scss */
   .l_offset.l_offset_col_5, .l_offset.l_offset_centi {
     margin-left: 42.1875%;
   }
 
-  /* line 99, ../../scss/global/_layout.scss */
+  /* line 103, ../../scss/global/_layout.scss */
   .l_offset.l_offset_col_6, .l_offset.l_offset_deci {
     margin-left: 50.625%;
   }
 
-  /* line 102, ../../scss/global/_layout.scss */
+  /* line 106, ../../scss/global/_layout.scss */
   .l_offset.l_offset_col_7, .l_offset.l_offset_deka {
     margin-left: 59.0625%;
   }
 
-  /* line 105, ../../scss/global/_layout.scss */
+  /* line 109, ../../scss/global/_layout.scss */
   .l_offset.l_offset_col_8, .l_offset.l_offset_hecto {
     margin-left: 67.5%;
   }
 
-  /* line 108, ../../scss/global/_layout.scss */
+  /* line 112, ../../scss/global/_layout.scss */
   .l_offset.l_offset_col_9, .l_offset.l_offset_kilo {
     margin-left: 75.9375%;
   }
 
-  /* line 111, ../../scss/global/_layout.scss */
+  /* line 115, ../../scss/global/_layout.scss */
   .l_offset.l_offset_col_10, .l_offset.l_offset_mega {
     margin-left: 84.375%;
   }
 
-  /* line 114, ../../scss/global/_layout.scss */
+  /* line 118, ../../scss/global/_layout.scss */
   .l_offset.l_offset_col_11, .l_offset.l_offset_giga {
     margin-left: 92.8125%;
   }
 
-  /* line 118, ../../scss/global/_layout.scss */
+  /* line 122, ../../scss/global/_layout.scss */
   main {
     width: 90%;
     max-width: 60em;
