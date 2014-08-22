@@ -2,7 +2,7 @@
 
 ## General
 
-This document contains the formatting guidelines and best practices for the front-end web development team at Isobar. There are many ways of leveraging HTML, CSS, and JavaScript to create a website - each item here represents either (1) a decision we've made favoring one method over its alternatives or (2) a reminder to follow existing standards. What this document is _not_ is a series of explanations as to how front-end technologies work; a basic familiarity is assumed. It also does _not_ provide evaluations of the pros and cons of various alternatives; we pick what we consider to be the best one and run with it. Any issues that don't yet have a clear solution are not listed here.
+This document contains the formatting guidelines and best practices for the front-end web development team at Johnson and Johnson. There are many ways of leveraging HTML, CSS, and JavaScript to create a website - each item here represents either (1) a decision we've made favoring one method over its alternatives or (2) a reminder to follow existing standards. What this document is _not_ is a series of explanations as to how front-end technologies work; a basic familiarity is assumed. It also does _not_ provide evaluations of the pros and cons of various alternatives; we pick what we consider to be the best one and run with it. Any issues that don't yet have a clear solution are not listed here.
 
 Our motivations in creating this document are to (1) foster code consistency across our projects to facilitate ease of maintenance and onboarding and (2) educate new developers on how best to create robust, performant, and accessible websites.
 
