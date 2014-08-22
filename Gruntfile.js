@@ -5,7 +5,7 @@ module.exports = function(grunt) {
 
   // @todo: move to json file
   var standards = {
-	ourLanguages : ['en', 'es', 'nglayout'], // nglayout? just showing my age
+	ourLanguages : ['en', 'es'],
 	defaultFile : 'index',
 	defaultExt : '.html',
 	// change this to have the 'index' file be another language
@@ -77,14 +77,6 @@ module.exports = function(grunt) {
 		  'es.html' : ['sections/es/build/es.hbs']
 		}
 	  },
-	  // this is a new test layout + new content
-	  nglayout: {
-		options : {
-		  data : 'content/en/build/data.json'
-		},
-			src : 'content/en/build/en.hbs',
-			dest : 'nglayout.html'
-		},
 	},
 
 	// copy the specified default language to the specified file
