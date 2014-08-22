@@ -1,19 +1,19 @@
 //"use strict";
 /**
- * Author: Isobar North America
+ * Author: Johnson and Johnson
  */
-var ISOBAR = {
+var JNJ = {
 	common : {
 		init: function(){
 			this.toc();
 			this.syntax();
-			this.stuff();
+			this.animations();
 		},
 		// generate table of contents
 		toc : function(){
 			var main = document.getElementById('main'),
 				toc = document.getElementById('toc'),
-				hx = $('section h1, section h2, section h3, section h4, section h5, #revisions h1'),
+				hx = $('section h2, section h3, section h4, section h5, #revisions h1'),
 				frag = document.createDocumentFragment(),
 				hx_len = hx.length,
 				anchor, tag, the_text;
@@ -21,29 +21,25 @@ var ISOBAR = {
 			for (var i = 0, j = hx_len; i < j; i++) {
 				tag = hx[i].tagName.toLowerCase();
 
-				if (tag === 'h1' || tag == 'h2' || tag == 'h3' || tag == 'h4' || tag == 'h5') {
+				if (tag == 'h2' || tag == 'h3' || tag == 'h4' || tag == 'h5') {
 					the_text = $.trim( hx[i].innerHTML );
 					anchor = '_' + the_text.replace(/\s+|\-/g, '_').replace(/[^A-Z0-9_]/gi, '').replace(/_+/g, '_').toLowerCase();
 
 					hx[i].id = anchor;
-					hx[i].innerHTML += '<a href="#' + anchor + '" class="anchor_link" title="Permalink">◊</a>';
-					toc.innerHTML += '<li class="' + tag + '"><a href="#' + anchor + '">' + the_text + '</a></li>';
+					hx[i].innerHTML += '<a href="#' + anchor + '" class="badge message" title="Permalink">permalink</a>';
+
+					if(tag == 'h2') {
+						toc.innerHTML += '<li class="' + tag + '"><a href="#' + anchor + '"> ' + the_text + '</a></li>';
+					}
 				}
 				
 				///*console.log({ 'a': anchor, 'tag': tag, 'hx': hx[i] })*/;
 				
-				if (tag === 'h1') {
-					hx[i].innerHTML += '<a href="#" class="backAnchor" title="Top">Back to Top</a>';
-				}
+				// if (tag === 'h1') {
+				// 	hx[i].innerHTML += '<a href="#" class="backAnchor" title="Top">Back to Top</a>';
+				// }
 			}
 			toc.style.display = 'block';
-		},
-		// just hooking up back to top
-		stuff : function(){
-			$('a.backAnchor').live('click',function(){
-				window.scrollTo(0, 0);
-				return false;
-			});
 		},
 		// set up syntax highlighter
 		syntax : function(){
@@ -53,13 +49,31 @@ var ISOBAR = {
 			SyntaxHighlighter.defaults['toolbar'] = false;
 			SyntaxHighlighter.defaults['tab-size'] = 4;
 			SyntaxHighlighter.all();
+		},
+		animations : function() {
+
+			// Sample Modal
+			$("#launch_sample_modal").on("click", function(){
+				var qBox = new QBox({
+					html: $("#sample_modal").html(),
+					className: "mod m_pop m_modal l_col_6"
+				});
+				qBox.show();
+			});
+
+			// Toggle nav
+			$(".drawer").jnjDrawer();
+
+			// Accordion
+			$(".acdn").jnjAccordion();
+
 		}
 	}
 };
 
 var UTIL = {
 	fire : function(func,funcname, args){
-		var namespace = ISOBAR;  // indicate your obj literal namespace here
+		var namespace = JNJ;  // indicate your obj literal namespace here
 		funcname = (funcname === undefined) ? 'init' : funcname;
 		if (func !== '' && namespace[func] && typeof namespace[func][funcname] == 'function'){
 			namespace[func][funcname](args);
