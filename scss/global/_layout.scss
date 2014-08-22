@@ -23,6 +23,10 @@
 	margin-bottom: 0.6875em;
 }
 
+dt {
+	font-weight: 500;
+}
+
 @media only screen and (min-width:600px){
 	.l_col,
 	.pico, .nano, .micro, .milli, .centi, .deci, .deka, .hecto, .kilo, .mega, .giga {
