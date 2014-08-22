@@ -1,4 +1,3 @@
-@import 'colors';
 /**
  * Print styles.
  *
@@ -34,7 +33,7 @@
 	}
 
 	h1, h2, h3 {
-		color: $red;
+		color: #f00;
 		position: relative;
 		margin-top: 20px;
 		font-weight:200
@@ -52,7 +51,7 @@
 
 	a,a:visited{
 		text-decoration:none;
-		color: $red;
+		color: #f00;
 	}
 
 	body .fork,#side,header #social,canvas,.anchor_link,.backAnchor{

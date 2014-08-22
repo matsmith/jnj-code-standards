@@ -1,165 +1,122 @@
-@import 'colors';
-/**
- * html5doctor.com Reset Stylesheet (Eric Meyer's Reset Reloaded + HTML5 baseline)
- * v1.6.1 2010-09-17 | Authors: Eric Meyer & Richard Clark
- * html5doctor.com/html-5-reset-stylesheet/
- */
-
-html, body, div, span, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
-small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
+/*
+Grapefruit: #c85656, rgba(0, 100, 145, 1)
+Red: #ff6d6d, rgba(227, 24, 55, 1)
+*/
+@font-face {
+	font-family: 'archivo_narrowbold';
+	src: url('../../fonts/archivonarrow-bold.eot');
+	src: url('../../fonts/archivonarrow-bold.eot?#iefix') format('embedded-opentype'),
+		 url('../../fonts/archivonarrow-bold.woff') format('woff'),
+		 url('../../fonts/archivonarrow-bold.ttf') format('truetype'),
+		 url('../../fonts/archivonarrow-bold.svg#archivo_narrowbold') format('svg');
+	font-weight: normal;
+	font-style: normal;
 }
+@font-face {
+    font-family: 'archivo_narrowregular';
+    src: url('../../fonts/archivonarrow-regular.eot');
+    src: url('../../fonts/archivonarrow-regular.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/archivonarrow-regular.woff') format('woff'),
+         url('../../fonts/archivonarrow-regular.ttf') format('truetype'),
+         url('../../fonts/archivonarrow-regular.svg#archivo_narrowregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
 
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block;
 }
-
-blockquote, q { quotes: none; }
-
-blockquote:before, blockquote:after,
-q:before, q:after { content: ""; content: none; }
-
-ins { background-color: $highlight-color; color: $black; text-decoration: none; }
-
-mark { background-color: $highlight-color; color: $black; font-style: italic; font-weight: bold; }
-
-del { text-decoration: line-through; }
-
-abbr[title], dfn[title] { border-bottom: 1px dotted; cursor: help; }
-
-table { border-collapse: collapse; border-spacing: 0; }
-
-hr { display: block; height: 1px; border: 0; border-top: 1px solid $border-color; margin: 1em 0; padding: 0; }
-
-input, select { vertical-align: middle; }
-
-//Reset finished, start styles, consider merging reset into base styles
-/**
- * Minimal base styles.
- */
-
-/* Always force a scrollbar in non-IE */
-html { overflow-y: scroll; }
-
-/* Accessible focus treatment: people.opera.com/patrickl/experiments/keyboard/test */
-a:hover, a:active { outline: none; }
-
-ul, ol { margin-left: 2em; }
-ol { list-style-type: decimal; }
-
-/* Remove margins for navigation lists */
-nav ul, nav li { margin: 0; list-style: none; list-style-image: none; }
-
-td { vertical-align: top; }
-
-textarea { overflow: auto; } /* www.sitepoint.com/blogs/2010/08/20/ie-remove-textarea-scrollbars/ */
-
-/* Align checkboxes, radios, text inputs with their label by: Thierry Koblentz tjkdesign.com/ez-css/css/base.css  */
-input[type="radio"] { vertical-align: text-bottom; }
-input[type="checkbox"] { vertical-align: bottom; }
-
-/* Hand cursor on clickable input elements */
-label, input[type="button"], input[type="submit"], input[type="image"], button { cursor: pointer; }
-
-/* Webkit browsers add a 2px margin outside the chrome of form elements */
-button, input, select, textarea { margin: 0; }
-
-/* Colors for form validity */
-input:valid, textarea:valid   { }
-input:invalid, textarea:invalid {
-	-ms-border-radius: 1px;
-	-moz-border-radius: 1px;
-	-webkit-border-radius: 1px;
-	-o-border-radius: 1px;
-	border-radius: 1px;
-
-	-moz-box-shadow: 0 0 5px red;
-	-webkit-box-shadow: 0 0 5px red;
-	-o-box-shadow: 0 0 5px red;
-	box-shadow: 0 0 5px red;
+@font-face {
+	font-family: 'FontAwesome';
+	src: url('../../fonts/fontawesome-webfont.eot');
+	src: url('../../fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../../fonts/fontawesome-webfont.woff') format('woff'),
+		 url('../../fonts/fontawesome-webfont.ttf') format('truetype'),
+		 url('../../fonts/fontawesome-webfont.svg#fontawesome') format('svg');
+	font-weight: normal;
+	font-style: normal;
 }
-
-.no-boxshadow input:invalid, .no-boxshadow textarea:invalid { background-color: #f0dddd; }
-
-
-/* These selection declarations have to be separate
-   No text-shadow: twitter.com/miketaylr/status/12228805301
-   Also: hot pink! */
-::-moz-selection{ background: #44B4E7; color: #fff; text-shadow: none; }
-::selection { background: #44B4E7; color: #fff; text-shadow: none; }
-
-/* j.mp/webkit-tap-highlight-color */
-a:link { -webkit-tap-highlight-color: #44B4E7; }
-
-/* Make buttons play nice in IE:
-   www.viget.com/inspire/styling-the-button-element-in-internet-explorer/ */
-button { width: auto; overflow: visible; }
-
-
-
-/**
-----------------------------------------------------------------------------------------------------
- * Primary styles
- *
- * Author: ISOBAR
-----------------------------------------------------------------------------------------------------*/
 
 body {
-	border-top: 1px solid $red;
-	color: #000;
-	min-width: 960px;
+	font: 300 1em/1.375em "Helvetica Neue", Arial, Helvetica, sans-serif;
+	color: #515a5b;
+	padding: 0 0.5em;
 }
 
-figure {
-	background: #fff;
-	border: 3px solid;
-	border-color: #ddd #999 #666;
+a:link, a:visited {
+	color: #c85656;
+	text-decoration: none;
+}
+a:hover, a:active, a:focus {
+	color: #ff6d6d;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin-top: 0;
+	color: #5a2726; /* Dark Brown */
+	font-family: "archivo_narrowregular", "ArialNarrow", Arial, "Helvetica Neue", Helvetica, sans-serif;
+	letter-spacing: -1px;
+}
+h1 {
+	font-size: 3em;
+	line-height: 1.375em;
+	margin-bottom: 0.22915em;
+}
+h2 {
+	font-size: 2em;
+	line-height: 1.375em;
+	margin-bottom: 0.34375em;
+}
+h3 {
+	font-size: 1.75em;
+	line-height: 1.5714em;
+	margin-bottom: 0.39285em;
+}
+h4 {
+	font-size: 1.5em;
+	line-height: 1.8333em;
+	margin-bottom: 0.45835em;
+}
+h5, h6 {
+	font: bold 1em/1.375em "Helvetica Neue", Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+	margin-bottom: 0.6875em;
+}
+h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:last-child {
+	margin-bottom: 0;
+}
+.subhead {
 	display: block;
-	margin: -15px -2px 10px;
-	padding: 1px;
-	text-align: center;
-	box-shadow: #ccc 0 1px 3px;
-	-moz-box-shadow: #ccc 0 1px 3px;
-	-webkit-box-shadow: #ccc 0 1px 3px;
-	-o-box-shadow: #ccc 0 1px 3px;
+	font: bold 0.375em "Helvetica Neue", Arial, Helvetica, sans-serif;
+	line-height: 1;
+	opacity: 0.65;
+	letter-spacing: normal;
 }
 
-//todo: check what this is used for
-figure.extra { margin-top: 10px; }
-
-figcaption {
-	font-size: 10px; 
-	font-style: italic;
-	text-align: left;
+p, ul, ol, form, table {
+	margin: 0 0 1.375em;
+	padding: 0;
 }
-	
-abbr { border-bottom: 1px dotted; }
-
-p, dl, hr, h1, h2, h3, h4, h5, h6, ol, ul, pre, table, address, fieldset {
-    margin-bottom: 10px;
+p:last-child, ul:last-child, ol:last-child, form:last-child, table:last-child {
+	margin-bottom: 0;
 }
-
-//todo: check what this is used for
-p.indent { margin: -10px 0 5px 0; }
-
-dl { margin-left: 15px; }
-dt { font-weight: bold; }
-dt:after { content: ':'; }
-dd { margin-bottom: 10px; }
-
-dd{
-	margin-bottom:10px
+li {
+	margin: 0 0 0.6875em;
+	list-style: none;
+}
+li:last-child {
+	margin-bottom: 0;
+}
+.copy li, li.copy {
+	margin-left: 1.5em;
+	list-style: inherit;
+}
+blockquote {
+	margin-left: 0;
+	padding-left: 1em;
+	border-left: 0.25em solid #eee;
+}
+img, object, video, audio {
+	max-width: 100%;
+}
+code {
+	font: 0.875em Monaco, monospace;
+	background-color: rgba(0, 0, 0, 0.05);
 }
