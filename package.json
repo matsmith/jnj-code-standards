@@ -1,16 +1,16 @@
 {
-  "name": "code-standards",
+  "name": "jnj-code-standards",
   "version": "0.0.2",
   "description": "",
   "main": "Gruntfile.js",
   "scripts": {},
   "repository": {
     "type": "git",
-    "url": "https://github.com/isobar-idev/code-standards.git"
+    "url": "https://github.com/matsmith/jnj-code-standards.git"
   },
-  "author": "Roundarch Isobar",
+  "author": "Mathew Smith: UI Architect, Johnson and Johnson",
   "bugs": {
-    "url": "https://github.com/isobar-idev/code-standards/issues"
+    "url": "https://github.com/matsmith/jnj-code-standards/issues"
   },
   "dependencies": {
     "assemble": "~0.4.37"
