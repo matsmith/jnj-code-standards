@@ -345,27 +345,74 @@
 		<p>Using <code>!important</code> overrides all specificity no matter how high it is. We like to avoid using it for this reason. Most of the time it is not necessary. Even if you need to override a selector in a stylesheet you don't have access to, there are usually ways to override it without using !important. Avoid using it if possible.</p>
 
 
-		<h3>Pixels vs. Ems</h3>
+		<h3>Font Sizing</h3>
 
-		<p>We use the <code>px</code> unit of measurement to define <code>font size</code>, because it offers absolute control over text. We realize that using the <code>em</code> unit for font sizing used to be popular, to accommodate for Internet Explorer 6 not resizing pixel based text. However, all major browsers (including <abbr title="Internet Explorer 7">IE7</abbr> and <abbr title="Internet Explorer 8">IE8</abbr>) now support text resizing of pixel units and/or full-page zooming. Since <abbr title="Internet Explorer 6">IE6</abbr> is largely considered deprecated, pixels sizing is preferred. Additionally, unit-less <code>line-height</code> is preferred because it does not inherit a percentage value of its parent element, but instead is based on a multiplier of the <code>font-size</code>.</p>
+		<p>Determining a unit of measurement to size our text can be a topic of heated debate, even in this day and age. Unfortunately, there are still various pros and cons that make the various techniques less desirable. It's just a matter of which less-desirable is most desirable.</p>
 
+		<p>There are three main techniques that are extolled:</p>
 
-		<figure class="preCode">Correct</figure>
+		<ol>
+			<li>Size with px</li>
+			<li>Size with em</li>
+			<li>Size with rem</li>
+		</ol>
+
+		<p>Let's review these three approaches from least to most recommended.</p>
+
+		<h4>Sizing with px - Good</h4>
+
+		<p>In the early days of the web, we used pixels to size our text. It's reliable and consistent. Unfortunately, users of Internet Explorer—even in IE9—do not have the ability to change the size of the text using the browser function of increasing or decreasing font size. For those concerned about the usability of their site, this may be a big deal. Recent versions of IE include zooming, which increases the size of everything on the page—a feature that is also available in most other mainstream browsers, too. This has helped mitigate the issue to a degree.</p>
+
+		<h4>Sizing with em - Better</h4>
+		
+		<p>The technique modifies the base font-size on the body using a percentage. This adjusts things so that 1em equals 10px, instead of the default 16px. To set the font-size to the equivalent of 14px, set it to 1.4em.</p>
+
 		<textarea class="brush:css">
-			#selector {
-				font-size: 13px;
-				line-height: 1.5;  /*  13 * 1.5 = 19.5 ~ Rounds to 20px. */
-			}
+			body { font-size:62.5%; }
+			h1 { font-size: 2.4em; } /* =24px */
+			p  { font-size: 1.4em; } /* =14px */
+			li { font-size: 1.4em; } /* =14px? */
 		</textarea>
 
-		<figure class="preCode">Incorrect</figure>
+		<p>The problem with em-based font sizing is that the font size compounds. A list within a list isn't 14px, it's 20px. Go another level deeper and it's 27px! These issues can be worked around by declaring any child elements to use 1em, avoiding the compounding effect.</p>
+
 		<textarea class="brush:css">
-			/*  Equivalent to 13px font-size and 20px line-height, but only if the browser default text size is 16px. */
-			#selector {
-				font-size: 0.813em;
-				line-height: 1.25em;
-			}
+			body { font-size:62.5%; }
+			h1 { font-size: 2.4em; } /* =24px */
+			p  { font-size: 1.4em; } /* =14px */
+			li { font-size: 1.4em; } /* =14px? */
+			li li, li p /* etc */ { font-size: 1em; }
 		</textarea>
+
+		<p>The compounding nature of em-based font-sizing can be frustrating so what else can we do?</p>
+
+		<h4>Sizing with rem - Best</h4>
+
+		<p>CSS3 introduces a few new units, including the rem unit, which stands for "root em". If this hasn't put you to sleep yet, then let's look at how rem works.</p>
+
+		<p>The em unit is relative to the font-size of the parent, which causes the compounding issue. The rem unit is relative to the root&mdash;or the <code>html</code>&mdash;element. That means that we can define a single font size on the html element and define all rem units to be a percentage of that.</p>
+
+		<textarea class="brush:css">
+			html { font-size: 62.5%; } 
+			body { font-size: 1.4rem; } /* =14px */
+			h1   { font-size: 2.4rem; } /* =24px */
+		</textarea>
+
+		<p>We're defining a base font-size of 62.5% to have the convenience of sizing rems in a way that is similar to using px.</p>
+
+		<p>But what pitiful browser support do we have to worry about?</p>
+
+		<p>You might be surprised to find that browser support is surprisingly decent: Safari 5, Chrome, Firefox 3.6+, and even Internet Explorer 9 have support for this. The nice part is that IE9 supports resizing text when defined using rems.</p>
+
+		<p>What do we do for browsers that don't support rem units? We can specify the fall-back using px, if you don't mind users of older versions of Internet Explorer still being unable to resize the text (well, there's still page zoom in IE7 and IE8). To do so, we specify the font-size using px units first and then define it again using rem units.</p>
+
+		<textarea class="brush:css">
+			html { font-size: 62.5%; } 
+			body { font-size: 14px; font-size: 1.4rem; } /* =14px */
+			h1   { font-size: 24px; font-size: 2.4rem; } /* =24px */
+		</textarea>
+
+		<p>And voila, we now have consistent and predictable sizing in all browsers, and resizable text in the current versions of all major browsers.  Once our browser support becomes IE9 and/or above then we can leisurely remove our px decleration (one extra declaration shouldn't provide too much bloat).</p>
 
 
 		<h3>Internet Explorer Bugs</h3>
